@@ -30,11 +30,26 @@ Run the script as:
 python main.py INSERT_PAT_HERE [owner/repository]
 ```
 
-- The token argument is required. Running with no arguments, or with `-h` or `--help`, prints the usage line instead of an error.
+- The token argument is required. Running with no arguments prints
+  the usage message and exits 2. `-h` or `--help` prints the full
+  usage and exits 0, and it works even on a machine where PyGithub is
+  not installed yet, because the import happens after argument
+  parsing.
+- Add `--dry-run` to list the issues that would be closed, and the
+  pull requests that would be skipped, without closing anything. For
+  a bulk action with no undo in this script, that is the mode to run
+  first.
+- A repository argument that is not shaped like `owner/repository`
+  exits 2 before any network call. A bad token or unknown repository
+  prints the API error and exits 1, before any close happens.
 - The repository argument is optional. When it is omitted, the script uses the placeholder repository written in `main.py` (`CY83R-3X71NC710N/Example-Project`), so pass a real `owner/repository` value for real use.
 - The script prints one line for each issue it closes and one line for each pull request it skips.
 
-Warning: this closes issues in bulk and the action is not undone by the script. Double check the repository argument before running.
+Warning: this closes issues in bulk and the action is not undone by the script. Double check the repository argument before running, and run with `--dry-run` first.
+
+Tests: `python3 -m unittest` runs the closing logic against fake
+issues and a fake PyGithub module (no network, no real token),
+covering the pull request skip, dry run, and the exit codes.
 
 Note on the token: because the token is passed on the command line, it may be saved in your shell history. The script cannot clear its parent shell's history (an earlier version claimed to do this; that code did not work and has been removed), so clear your history yourself afterwards if that is a concern.
 
