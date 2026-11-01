@@ -1,10 +1,18 @@
-![banner](assets/banner.png)
+![Intro: the quiet bench before work, one clock waiting with its door open and its minute hand laid down](intro-banner.png)
+
 
 # Mass-Issue-Closer
+
+![Banner](banner.png)
+
+![Scene](scene.svg)
 
 Mass GitHub issue closer, written after its author created too many issues.
 
 This Python script closes every open issue in one GitHub repository. Open pull requests in the repository are skipped, not closed.
+
+
+![Separator](sep-heavy.svg)
 
 ## Setup
 
@@ -44,6 +52,8 @@ python main.py INSERT_PAT_HERE [owner/repository]
   prints the API error and exits 1, before any close happens.
 - The repository argument is optional. When it is omitted, the script uses the placeholder repository written in `main.py` (`CY83R-3X71NC710N/Example-Project`), so pass a real `owner/repository` value for real use.
 - The script prints one line for each issue it closes and one line for each pull request it skips.
+
+> **Bench caution, written on a repair tag:** bulk closing is not bulk reversible, and pull requests are deliberately skipped, never closed. Tag the clock before you touch its works: confirm the repository twice, and run `--dry-run` first.
 
 Warning: this closes issues in bulk and the action is not undone by the script. Double check the repository argument before running, and run with `--dry-run` first.
 

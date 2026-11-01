@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="Workshop wall: six cuckoo clocks on a bench, doors opening one after another, weights rising as each door closes">
+<rect width="1200" height="340" fill="#8a8478"/>
+<rect x="0" y="0" width="1200" height="150" fill="#9a958a"/>
+<rect x="1010" y="24" width="130" height="120" fill="#aebabe"/>
+<g stroke="#7c8890" stroke-width="2"><line x1="1030" y1="36" x2="1026" y2="66"/><line x1="1070" y1="30" x2="1066" y2="72"/><line x1="1110" y1="38" x2="1106" y2="64"/></g>
+<rect x="40" y="86" width="700" height="10" fill="#3c2715"/>
+<g fill="#a89e8e" stroke="#7e7666" stroke-width="1.5">
+<polygon points="70,86 70,50 100,32 130,50 130,86"/><polygon points="300,86 300,50 330,32 360,50 360,86"/><polygon points="530,86 530,50 560,32 590,50 590,86"/>
+</g>
+<!-- six clocks on the bench, doors opening in sequence, never together -->
+<g font-family="sans-serif">
+<g transform="translate(70,150)">
+<polygon points="0,110 0,26 45,0 90,26 90,110" fill="#5e3e22" stroke="#3c2715" stroke-width="2"/>
+<circle cx="45" cy="66" r="24" fill="#f0e6cc" stroke="#b08e4a" stroke-width="2"/>
+<g><rect x="30" y="8" width="30" height="26" fill="#6e4c2a" stroke="#3c2715" stroke-width="1.5"/><ellipse cx="45" cy="24" rx="8" ry="6" fill="#8a6238"/><animateTransform attributeName="transform" type="rotate" values="0 30 20; -38 30 20; -38 30 20; 0 30 20; 0 30 20" keyTimes="0;0.08;0.2;0.28;1" dur="12s" begin="0s" repeatCount="indefinite"/></g>
+</g>
+<g transform="translate(250,150)">
+<polygon points="0,110 0,26 45,0 90,26 90,110" fill="#5e3e22" stroke="#3c2715" stroke-width="2"/>
+<circle cx="45" cy="66" r="24" fill="#f0e6cc" stroke="#b08e4a" stroke-width="2"/>
+<g><rect x="30" y="8" width="30" height="26" fill="#6e4c2a" stroke="#3c2715" stroke-width="1.5"/><ellipse cx="45" cy="24" rx="8" ry="6" fill="#8a6238"/><animateTransform attributeName="transform" type="rotate" values="0 30 20; -38 30 20; -38 30 20; 0 30 20; 0 30 20" keyTimes="0;0.08;0.2;0.28;1" dur="12s" begin="2s" repeatCount="indefinite"/></g>
+</g>
+<g transform="translate(430,150)">
+<polygon points="0,110 0,26 45,0 90,26 90,110" fill="#5e3e22" stroke="#3c2715" stroke-width="2"/>
+<circle cx="45" cy="66" r="24" fill="#f0e6cc" stroke="#b08e4a" stroke-width="2"/>
+<g><rect x="30" y="8" width="30" height="26" fill="#6e4c2a" stroke="#3c2715" stroke-width="1.5"/><ellipse cx="45" cy="24" rx="8" ry="6" fill="#8a6238"/><animateTransform attributeName="transform" type="rotate" values="0 30 20; -38 30 20; -38 30 20; 0 30 20; 0 30 20" keyTimes="0;0.08;0.2;0.28;1" dur="12s" begin="4s" repeatCount="indefinite"/></g>
+</g>
+<g transform="translate(610,150)">
+<polygon points="0,110 0,26 45,0 90,26 90,110" fill="#5e3e22" stroke="#3c2715" stroke-width="2"/>
+<circle cx="45" cy="66" r="24" fill="#f0e6cc" stroke="#b08e4a" stroke-width="2"/>
+<g><rect x="30" y="8" width="30" height="26" fill="#6e4c2a" stroke="#3c2715" stroke-width="1.5"/><ellipse cx="45" cy="24" rx="8" ry="6" fill="#8a6238"/><animateTransform attributeName="transform" type="rotate" values="0 30 20; -38 30 20; -38 30 20; 0 30 20; 0 30 20" keyTimes="0;0.08;0.2;0.28;1" dur="12s" begin="6s" repeatCount="indefinite"/></g>
+</g>
+<g transform="translate(790,150)">
+<polygon points="0,110 0,26 45,0 90,26 90,110" fill="#5e3e22" stroke="#3c2715" stroke-width="2"/>
+<circle cx="45" cy="66" r="24" fill="#f0e6cc" stroke="#b08e4a" stroke-width="2"/>
+<g><rect x="30" y="8" width="30" height="26" fill="#6e4c2a" stroke="#3c2715" stroke-width="1.5"/><ellipse cx="45" cy="24" rx="8" ry="6" fill="#8a6238"/><animateTransform attributeName="transform" type="rotate" values="0 30 20; -38 30 20; -38 30 20; 0 30 20; 0 30 20" keyTimes="0;0.08;0.2;0.28;1" dur="12s" begin="8s" repeatCount="indefinite"/></g>
+</g>
+<g transform="translate(970,150)">
+<polygon points="0,110 0,26 45,0 90,26 90,110" fill="#5e3e22" stroke="#3c2715" stroke-width="2"/>
+<circle cx="45" cy="66" r="24" fill="#f0e6cc" stroke="#b08e4a" stroke-width="2"/>
+<g><rect x="30" y="8" width="30" height="26" fill="#6e4c2a" stroke="#3c2715" stroke-width="1.5"/><ellipse cx="45" cy="24" rx="8" ry="6" fill="#8a6238"/><animateTransform attributeName="transform" type="rotate" values="0 30 20; -38 30 20; -38 30 20; 0 30 20; 0 30 20" keyTimes="0;0.08;0.2;0.28;1" dur="12s" begin="10s" repeatCount="indefinite"/></g>
+</g>
+</g>
+<rect x="0" y="262" width="1200" height="14" fill="#3c2715"/>
+<!-- bench front strip: pinecone weights rising a step as each door closes -->
+<g fill="#64451f" stroke="#3c2715" stroke-width="1.5">
+<g><polygon points="100,286 118,286 113,318 105,318"><animateTransform attributeName="transform" type="translate" values="0,10; 0,10; 0,0; 0,0" keyTimes="0;0.25;0.35;1" dur="12s" begin="0s" repeatCount="indefinite"/></polygon></g>
+<g><polygon points="280,286 298,286 293,318 285,318"><animateTransform attributeName="transform" type="translate" values="0,10; 0,10; 0,0; 0,0" keyTimes="0;0.4;0.5;1" dur="12s" begin="0s" repeatCount="indefinite"/></polygon></g>
+<g><polygon points="460,286 478,286 473,318 465,318"><animateTransform attributeName="transform" type="translate" values="0,10; 0,10; 0,0; 0,0" keyTimes="0;0.55;0.65;1" dur="12s" begin="0s" repeatCount="indefinite"/></polygon></g>
+<g><polygon points="640,286 658,286 653,318 645,318"><animateTransform attributeName="transform" type="translate" values="0,10; 0,10; 0,0; 0,0" keyTimes="0;0.7;0.8;1" dur="12s" begin="0s" repeatCount="indefinite"/></polygon></g>
+<g><polygon points="820,286 838,286 833,318 825,318"><animateTransform attributeName="transform" type="translate" values="0,10; 0,10; 0,0; 0,0" keyTimes="0;0.85;0.93;1" dur="12s" begin="0s" repeatCount="indefinite"/></polygon></g>
+<g><polygon points="1000,286 1018,286 1013,318 1005,318"><animateTransform attributeName="transform" type="translate" values="0,10; 0,10; 0,2; 0,2" keyTimes="0;0.92;0.99;1" dur="12s" begin="0s" repeatCount="indefinite"/></polygon></g>
+</g>
+<rect y="322" width="1200" height="18" fill="#59422a"/>
+</svg>
