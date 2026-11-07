@@ -1,9 +1,11 @@
-![Intro: the quiet bench before work, one clock waiting with its door open and its minute hand laid down](intro-banner.png)
+![Intro: the end of the line, the conveyor empty and still under its row of red stamp presses, one last cream ticket waiting on the side belt beside the tall stack of stamped tickets](intro-banner.png)
 
 
 # Mass-Issue-Closer
 
-![Banner](banner.png)
+<p align="center"><img src="logo.png" alt="Mass-Issue-Closer logo: a black conveyor belt seen from above, a heavy red stamp press descending onto one blank cream ticket, steel blue factory frame around the belt" width="200"></p>
+
+![Banner: a long steel blue factory conveyor carrying a queue of cream tickets toward a row of red stamp presses, the stamped tickets stacking into a neat pile at the end while one differently shaped piece is diverted onto a side belt](banner.png)
 
 ![Scene](scene.svg)
 
@@ -53,7 +55,7 @@ python main.py INSERT_PAT_HERE [owner/repository]
 - The repository argument is optional. When it is omitted, the script uses the placeholder repository written in `main.py` (`CY83R-3X71NC710N/Example-Project`), so pass a real `owner/repository` value for real use.
 - The script prints one line for each issue it closes and one line for each pull request it skips.
 
-> **Bench caution, written on a repair tag:** bulk closing is not bulk reversible, and pull requests are deliberately skipped, never closed. Tag the clock before you touch its works: confirm the repository twice, and run `--dry-run` first.
+> **Line caution, stamped on the first ticket:** bulk closing is not bulk reversible, and pull requests are deliberately skipped, never closed. Read the ticket before the stamp falls: confirm the repository twice, and run `--dry-run` first.
 
 Warning: this closes issues in bulk and the action is not undone by the script. Double check the repository argument before running, and run with `--dry-run` first.
 

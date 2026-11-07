@@ -1,8 +1,8 @@
-Copyright 2025 The Allkin Project Authors (https://github.com/googlefonts/allkin), with Reserved Font Name "Allkin".
+Copyright 2023 The Teko Project Authors (https://www.github.com/googlefonts/teko)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-https://openfontlicense.org
+http://scripts.sil.org/OFL
 
 
 -----------------------------------------------------------
