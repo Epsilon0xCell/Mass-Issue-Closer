@@ -3,84 +3,83 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mass-Issue-Closer: the repair bench book</title>
+<title>Mass-Issue-Closer: the stamping line book</title>
 <meta name="description" content="A Python command line tool that closes every open issue in a single GitHub repository in one run, while leaving open pull requests untouched.">
 <style>
-@font-face{font-family:'Allkin';src:url('fonts/Allkin-Regular.ttf') format('truetype')}
-@font-face{font-family:'Alegreya Sans';src:url('fonts/AlegreyaSans-Regular.ttf') format('truetype')}
-@font-face{font-family:'Alegreya Sans';src:url('fonts/AlegreyaSans-Bold.ttf') format('truetype');font-weight:700}
+@font-face{font-family:'Teko';src:url('fonts/Teko-Regular.ttf') format('truetype');font-weight:400}
+@font-face{font-family:'Teko';src:url('fonts/Teko-SemiBold.ttf') format('truetype');font-weight:600}
+@font-face{font-family:'Archivo Narrow';src:url('fonts/ArchivoNarrow-Regular.ttf') format('truetype');font-weight:400}
+@font-face{font-family:'Archivo Narrow';src:url('fonts/ArchivoNarrow-Bold.ttf') format('truetype');font-weight:700}
 *{box-sizing:border-box}
-body{margin:0;background:#7a6248;color:#2e2013;font-family:'Alegreya Sans',sans-serif;line-height:1.6}
+body{margin:0;background:#20242a;color:#2b2118;font-family:'Archivo Narrow',sans-serif;line-height:1.55}
 header.hero{max-width:940px;margin:0 auto;padding:34px 22px 4px}
-header.hero img{width:100%;height:auto;display:block;border:4px solid #3c2715}
-h1{font-family:'Allkin','Alegreya Sans',sans-serif;font-size:2.6rem;margin:.35em 0 .1em;color:#f0e6cc}
-.lede{font-size:1.12rem;max-width:64ch;color:#f5eedd}
+header.hero img{width:100%;height:auto;display:block;border:4px solid #101216;outline:2px solid #3d5a74}
+h1{font-family:'Teko',sans-serif;font-weight:600;font-size:3rem;letter-spacing:.04em;text-transform:uppercase;margin:.3em 0 .05em;color:#f2ead8}
+.lede{font-size:1.12rem;max-width:64ch;color:#cfd6dd}
 main{max-width:940px;margin:0 auto;padding:6px 22px 44px}
-h2{font-family:'Allkin','Alegreya Sans',sans-serif;color:#f0e6cc;font-size:1.7rem;margin:1.5em 0 .4em;border-left:10px solid #b08e4a;padding-left:12px}
-.ledger{background:#f0e6cc;border-radius:3px;padding:18px 22px;margin:14px 0;box-shadow:0 2px 0 #3c2715}
+h2{font-family:'Teko',sans-serif;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#f2ead8;font-size:1.9rem;margin:1.4em 0 .4em;border-left:10px solid #c22f24;padding-left:12px}
+.ledger{background:#f2ead8;border-radius:2px;padding:18px 22px;margin:14px 0;box-shadow:0 3px 0 #101216}
 table{border-collapse:collapse;width:100%}
-td,th{border-bottom:1px solid #cbbd97;padding:8px 10px;text-align:left;vertical-align:top}
-th{background:#5e3e22;color:#f0e6cc}
-td.leave{color:#2e5434;font-weight:700}
-.tagbtn{display:inline-block;background:#f0e6cc;color:#4a3016;font-family:'Allkin','Alegreya Sans',sans-serif;font-weight:700;padding:.42em 1.2em .42em 1.7em;border:2px solid #8a6a34;border-radius:6px;clip-path:polygon(10px 0,100% 0,100% 100%,10px 100%,0 50%);text-decoration:none;position:relative;transition:transform .15s}
-.tagbtn::before{content:'';position:absolute;left:9px;top:50%;width:8px;height:8px;margin-top:-6px;border:2px solid #b08e4a;border-radius:50%}
-.tagbtn:hover{transform:rotate(-1.6deg)}
-.tagbtn:active{transform:none;box-shadow:0 0 0 3px #b08e4a}
-a.tooth{color:#f5eedd;text-decoration:none}
-a.tooth::before{content:'';display:inline-block;width:0;height:0;border-left:6px solid #b08e4a;border-top:5px solid transparent;border-bottom:5px solid transparent;margin-right:.5em}
-a.tooth:hover{color:#b8d4ba;text-decoration:underline}
-a.tooth:hover::before{transform:rotate(90deg)}
-.card{background:#f0e6cc;border-radius:3px;padding:6px 20px 14px;margin:14px 0;border-top:12px solid #5e3e22;position:relative}
-.card .no{position:absolute;top:-4px;right:14px;background:#b08e4a;color:#2e2013;border-radius:50%;width:30px;height:30px;text-align:center;line-height:30px;font-weight:700}
-.card.caution{border-left:5px solid #2e5434}
-.chain{border:0;height:14px;margin:30px 0 2px;background-image:radial-gradient(ellipse 13px 7px at 12px 7px,transparent 5px,#b08e4a 6px,transparent 7px);background-size:34px 14px;opacity:.85;position:relative}
-.chain::after{content:'';position:absolute;left:50%;top:-6px;width:18px;height:26px;margin-left:-9px;background:#64451f;clip-path:polygon(18% 0,82% 0,68% 100%,32% 100%)}
-pre{background:#3c2715;color:#f0e6cc;padding:16px 20px;overflow-x:auto;border:2px solid #b08e4a;font-family:Menlo,monospace}
-footer{max-width:940px;margin:0 auto;padding:4px 22px 40px;color:#e8dcc0;font-size:.93rem}
+td,th{border-bottom:1px solid #c9bb98;padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#3d5a74;color:#f2ead8;font-family:'Teko',sans-serif;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+td.leave{color:#3d5a74;font-weight:700}
+.tagbtn{display:inline-block;background:#c22f24;color:#f8f2df;font-family:'Teko',sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.35em 1.2em;border:2px solid #7e1d16;border-radius:3px;text-decoration:none;position:relative;transition:transform .12s}
+.tagbtn:hover{transform:rotate(-1.5deg)}
+.tagbtn:active{transform:none;box-shadow:inset 0 0 0 3px rgba(0,0,0,.35)}
+a.tooth{color:#f2ead8;text-decoration:none}
+a.tooth::before{content:'';display:inline-block;width:0;height:0;border-left:6px solid #c22f24;border-top:5px solid transparent;border-bottom:5px solid transparent;margin-right:.5em}
+a.tooth:hover{color:#bcd0e2;text-decoration:underline}
+.card{background:#f2ead8;border-radius:2px;padding:6px 20px 14px;margin:14px 0;border-top:12px solid #3d5a74;position:relative}
+.card .no{position:absolute;top:-6px;right:14px;background:#c22f24;color:#f8f2df;border-radius:50%;width:30px;height:30px;text-align:center;line-height:30px;font-weight:700;font-family:'Teko',sans-serif}
+.card.caution{border-left:5px solid #c22f24}
+.chain{border:0;height:12px;margin:30px 0 2px;background:repeating-linear-gradient(90deg,#454b54 0 26px,#31363e 26px 30px);position:relative}
+.chain::after{content:'';position:absolute;left:50%;top:-9px;width:30px;height:30px;margin-left:-15px;border-radius:50%;background:#c22f24;border:3px solid #7e1d16}
+pre{background:#101216;color:#f2ead8;padding:16px 20px;overflow-x:auto;border:2px solid #3d5a74;font-family:Menlo,monospace}
+footer{max-width:940px;margin:0 auto;padding:4px 22px 40px;color:#9aa4ae;font-size:.93rem}
 </style>
 </head>
 <body>
 <header class="hero">
-<img src="https://raw.githubusercontent.com/Epsilon0xCell/Mass-Issue-Closer/main/assets/banner.png" alt="The repair bench in season, shelves of waiting clocks and the queue by the door">
+<img src="https://raw.githubusercontent.com/Epsilon0xCell/Mass-Issue-Closer/main/assets/banner.png" alt="A long steel blue factory conveyor carrying a queue of cream tickets toward a row of red stamp presses, the stamped tickets stacking into a neat pile at the end">
 <h1>Mass-Issue-Closer</h1>
-<p class="lede">A Python command line tool, written after its author opened too many issues by hand, that closes every open issue in a single GitHub repository in one run, while leaving open pull requests untouched. This site is the bench book: each arriving job gets a line, a tag, and a verdict.</p>
+<p class="lede">A Python command line tool, written after its author opened too many issues by hand, that closes every open issue in a single GitHub repository in one run, while leaving open pull requests untouched. This site is the line book: each arriving ticket gets a stamp, a stack, and a verdict.</p>
 <p><a class="tagbtn" href="https://github.com/Epsilon0xCell/Mass-Issue-Closer">The repo on GitHub</a> <a class="tagbtn" href="#run">The run</a></p>
 </header>
 <main>
 <hr class="chain">
-<h2>Ledger page one: intake conditions</h2>
+<h2>Line page one: intake conditions</h2>
 <div class="ledger">
-<p>Two things must be on the bench before work starts.</p>
+<p>Two things must be on the belt before the line starts.</p>
 <p><b>A repository, named as owner/repository.</b> The argument is optional: leave it out and the script uses the placeholder repository written in main.py, so pass a real owner/repository value for real use. A value that is not shaped like owner/repository is refused with exit 2 before any network call.</p>
 <p><b>Access permission.</b> Generate a classic GitHub personal access token with the repo scope, which includes public_repo for public repositories, and pass it as the first argument. One dependency is needed first:</p>
 <pre>pip install -r requirements.txt</pre>
 <p>That installs PyGithub. Running with no arguments prints the usage message and exits 2. The flags -h and --help print the full usage and exit 0, and they work even where PyGithub is not installed yet, because the import happens after argument parsing.</p>
 </div>
 <hr class="chain">
-<h2>Ledger page two: the sorting</h2>
+<h2>Line page two: the sorting</h2>
 <div class="ledger">
 <p>GitHub returns pull requests in the same list as issues. The tool checks each entry, and the two kinds get opposite verdicts.</p>
 <table>
 <tr><th>Entry on the list</th><th>Verdict</th></tr>
-<tr><td>An open issue</td><td>Tagged for closing. One line printed per issue: Closed issue #N: title.</td></tr>
-<tr><td>An open pull request</td><td class="leave">Left on the shelf. Skipped, never closed. One line printed per skip: Skipped pull request #N: title.</td></tr>
+<tr><td>An open issue</td><td>Stamped for closing. One line printed per issue: Closed issue #N: title.</td></tr>
+<tr><td>An open pull request</td><td class="leave">Diverted to the side belt. Skipped, never closed. One line printed per skip: Skipped pull request #N: title.</td></tr>
 </table>
 <p>A finished pass ends with a summary line: Done, the count of issues closed, and the count of pull requests skipped.</p>
 </div>
 <hr class="chain">
-<h2 id="run">Ledger page three: the run</h2>
+<h2 id="run">Line page three: the run</h2>
 <pre>python main.py INSERT_PAT_HERE [owner/repository]</pre>
 <div class="card"><span class="no">1</span><p>Run with --dry-run first. It lists the issues that would be closed and the pull requests that would be skipped, printing Would close lines, and closes nothing.</p></div>
 <div class="card"><span class="no">2</span><p>A bad token or an unknown repository prints the API error and exits 1, before any close happens.</p></div>
 <div class="card"><span class="no">3</span><p>If a run stops early, most often on GitHub API rate limits, simply rerun it. Issues already closed are not returned again, so the rerun continues with what is still open. Tests run with python3 -m unittest against fake issues and a fake PyGithub module: no network, no real token.</p></div>
 <p><a class="tooth" href="https://github.com/Epsilon0xCell/Mass-Issue-Closer/tree/main/Mass-Issue-Closer-Visuals">The visuals folder in the repo</a></p>
 <hr class="chain">
-<h2>Back cover: cautions, in the ledger's last hand</h2>
-<div class="card caution"><p>Closing cannot be undone in bulk, and this script does not undo it. Confirm the repository name twice before running, the way the bench tags a clock before touching its works, and run --dry-run first.</p>
+<h2>Back cover: cautions, in the line book's last hand</h2>
+<div class="card caution"><p>Closing cannot be undone in bulk, and this script does not undo it. Confirm the repository name twice before running, the way the line crew reads a ticket twice before the stamp falls, and run --dry-run first.</p>
 <p>Because the token is passed on the command line, it may be saved in your shell history. The script cannot clear its parent shell's history, so clear it yourself afterwards if that is a concern.</p></div>
 </main>
 <footer>
-<p>Files: main.py, test_main.py, requirements.txt, assets, and LICENSE. Fonts: the project's display face is Allkin (SIL Open Font License 1.1); as published, Allkin is a whole word glyph font with no Latin letterforms, so headings on this site fall back to Alegreya Sans (also SIL Open Font License 1.1) in the same stack. License texts sit beside the font files. The lettering reference named in the project prose was set aside as a mismatch and is not embedded.</p>
+<p>Files: main.py, test_main.py, requirements.txt, assets, and LICENSE. Fonts: Teko for display and Archivo Narrow for text, both SIL Open Font License 1.1, self-hosted, license texts beside the font files.</p>
 </footer>
 </body>
 </html>
